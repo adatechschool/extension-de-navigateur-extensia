@@ -1,0 +1,17 @@
+{
+    "manifest_version":3,
+    "name":"lingoloop",
+    "description":"Tu souhaites traduire un mot sans quitter la page ? Cette extension est faite pour toi !!!",
+    "version": "1.0",
+    "permissions": [
+    "scripting",
+    "activeTab"
+    ],
+    "action": {
+        "default_popup":"popup.html"
+    }
+    
+    
+    
+    
+    }
