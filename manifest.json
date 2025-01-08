@@ -1,7 +1,7 @@
 {
     "manifest_version":3,
-    "name":"lingoloop",
-    "description":"Tu souhaites traduire un mot sans quitter la page ? Cette extension est faite pour toi !!!",
+    "name":"To do list",
+    "description":"Si tu veux voir tes avancées et pas te perdre dans tes tâches, cette to do list est faite pour toi !",
     "version": "1.0",
     "permissions": [
     "scripting",
