@@ -1,23 +1,37 @@
 const btnValider = document.getElementById("btnValider")
+const input = document.getElementById('task').value // pour recupérer l'input dans le html
 let taskAdd = []
 
-function inputValue(){
-const input = document.getElementById('task').value // pour recupérer l'input dans le html
+// function inputValue(){
 
-btnValider.addEventListener('click', () =>{
-document.getElementById("displayTask").innerHTML = input  // on récupère et on affiche dans la page html la valeur de l'input
+// //console.log(taskAdd);
 
-taskAdd.forEach(task => {
-    console.log(task)
+
+// console.log(taskAdd)
+// return input
+
+// }
+function getTask(){
     taskAdd.push(input)
-});
+    
+}
 
 
-//console.log(taskAdd);
-
-})
-console.log(taskAdd)
-return input
+function displayTask(){
+    const test = getTask()
+    
+    btnValider.addEventListener('click', () =>{
+        document.getElementById("displayTask").innerHTML = input  // on récupère et on affiche dans la page html la valeur de l'input
+        
+        test.forEach(task => {
+            console.log(task)
+            
+        });
+    
+    }) 
 
 }
+
 console.log(inputValue())
+
+
