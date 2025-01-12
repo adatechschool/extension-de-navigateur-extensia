@@ -7,10 +7,16 @@ card.appendChild(ul);
 
 let taskList = []
 
+input.addEventListener('keypress', function(event){
+  if(event.key === "Enter"){
+    button.click()
+  }
+})
+
 button.addEventListener('click', () => {
    let userTask = input.value
     taskList.push(userTask)
-    ul.innerHTML = ""; // on vide la liste avant de réafficher les tâches
+    ul.innerHTML = "" // on vide la liste avant de réafficher les tâches
     input.value = ""
 
     taskList.forEach((task) => {
@@ -19,6 +25,7 @@ button.addEventListener('click', () => {
 
         ul.style.listStyle = "none";
         ul.appendChild(taskElement)
-   })  
-   console.log(taskList);
-});
+  })  
+   console.log(taskList)
+})
+
