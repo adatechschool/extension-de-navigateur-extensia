@@ -1,6 +1,11 @@
+body{
+    font-family: fredoka, sans-serif;
+    /* overflow-y: hidden;*/
+}
+
 #card{
     width: 300px;
-    height: 450px;
+    height: 580px;
     text-align: center;
     border-style: solid;
     border-width: 1.5px;
@@ -10,25 +15,114 @@
 }
 
 #header{
-    height: 120px;
+    height: 140px;
+    padding: 15px;
     border-radius: 13px 13px 0 0;
-    background: url(./img/4267109.jpg);
+    background: url(./img/4267109.jpg) center no-repeat;
     background-size: cover;
 }
 
 #date{
-    text-align: bottom;
+    color: white;
+    font-size: 22px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Place le contenu en bas */
+    height: 140px;
 }
 
 #btnValider{
     padding: 12px;
-    color: azure;
+    color: white;
+    cursor: pointer;
     border-style: none;
     border-radius: 2px;
+    transition: transform 0.3s;
     background-color: rgb(243, 132, 188);
+}
+
+#btnValider:hover {
+    transform: scale(0.97);
+    background-color: rgb(242, 107, 175);
 }
 
 input{
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 18px;
+    margin-bottom: 15px;
 }
+
+#containerList{
+    text-align: left;
+    overflow-y: auto; /* Ajoute un défilement vertical si nécessaire */
+    max-height: 400px; /* Limite la hauteur du conteneur */
+    padding-right: 10px;
+    }
+    
+ul{
+    padding-left: 20px;
+}    
+
+li {
+    width: 260px;
+    display: flex;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    align-items: center; /* Alignement vertical centré */
+    justify-content: space-between;
+    border-bottom: solid #e2e2e6 0.1rem;
+}
+
+input[type="checkbox"]{
+   margin-bottom: 20px;
+}
+
+input[type="checkbox"].taskUnChecked {
+    opacity: 0; /* Rendu invisible */
+    position: absolute; /* Supprime son influence sur la mise en page */
+    width: 20px; /* Ajuste la taille pour l'alignement */
+    height: 20px;
+    cursor: pointer;
+}
+
+input[type="checkbox"].taskUnChecked + label::before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin-right: 8px;
+    display: inline-block;
+    background: url('img/unchecked-icon.svg') no-repeat center center;
+    vertical-align: middle;
+}
+
+input[type="checkbox"].taskUnChecked:checked + label::before{
+    width: 16px;
+    height: 16px;
+    background: url('img/check-icon.svg') no-repeat center center;
+}
+
+label{
+    flex: 1; /* Permet au label de prendre tout l'espace restant */
+    font-size: 16px;
+    text-align: left;
+}
+
+.trashButton{ /*supprimer le style du bouton*/
+    width: 18px; 
+    height: 18px; 
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    transition: transform 0.3s;
+    background: url('img/trash-can-regular.svg') no-repeat center center;
+}
+
+.trashButton:hover{
+    width: 18px; 
+    height: 18px; 
+    transform: scale(0.97);
+    background: url('img/trash-can-red.svg') no-repeat center center;
+}
+
