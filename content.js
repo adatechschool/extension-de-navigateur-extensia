@@ -35,16 +35,15 @@ button.addEventListener('click', () => {
   }
 
     taskList.push(userTask)
-    ul.innerHTML = ""; // on vide la liste avant de réafficher les tâches
+    // ul.innerHTML = ""; // on vide la liste avant de réafficher les tâches
     input.value = "";
+    const listElement = document.createElement("li")
+    const label = document.createElement("label")
+    const trashButton = document.createElement("button")
+    const inputCheckbox = document.createElement("input")
 
     taskList.forEach((task) => {
-        const listElement = document.createElement("li")
-        const label = document.createElement("label")
-        const trashButton = document.createElement("button")
         trashButton.classList.add("trashButton")
-
-        const inputCheckbox = document.createElement("input")
         inputCheckbox.classList.add("taskUnChecked")
         inputCheckbox.type = "checkbox"
 

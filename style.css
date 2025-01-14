@@ -56,7 +56,8 @@ input{
 #containerList{
     text-align: left;
     overflow-y: auto; /* Ajoute un défilement vertical si nécessaire */
-    max-height: 400px; /* Limite la hauteur du conteneur */
+    max-height: 300px; /* Limite la hauteur du conteneur */
+    position : relative;
     padding-right: 10px;
     }
     

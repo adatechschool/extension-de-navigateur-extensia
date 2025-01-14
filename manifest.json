@@ -8,10 +8,8 @@
     "activeTab"
     ],
     "action": {
-        "default_popup":"popup.html"
+        "default_popup":"popup.html",
+        "default_icon":"icone_rose.png"
     }
-    
-    
-    
     
     }
