@@ -1,6 +1,16 @@
 body{
     font-family: fredoka, sans-serif;
     /* overflow-y: hidden;*/
+    background-color: white;
+    color:black;
+    transition: background-color 0.3s,color 0.3s;
+}
+
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+
 }
 
 #card{
@@ -80,7 +90,7 @@ input[type="checkbox"]{
 }
 
 input[type="checkbox"].taskUnChecked {
-    opacity: 0; /* Rendu invisible */
+    opacity: 0;  /*Rendu invisible */
     position: absolute; /* Supprime son influence sur la mise en page */
     width: 20px; /* Ajuste la taille pour l'alignement */
     height: 20px;
