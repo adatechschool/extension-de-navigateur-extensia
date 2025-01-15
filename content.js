@@ -6,12 +6,6 @@ const ul = document.createElement("ul")
 const date = document.getElementById("date")
 const trashButtonWhite = document.querySelector('.trashButton')
 
-const imgTrashWhite=document.createElement("img");
-img.src="img/trash-can-regular-white.svg";
-document.body.appendChild(Image)
-
-
-
 
 button.innerHTML = "Valider"
 containerList.appendChild(ul);
