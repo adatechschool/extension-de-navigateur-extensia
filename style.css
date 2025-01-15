@@ -6,11 +6,9 @@ body{
     transition: background-color 0.3s,color 0.3s;
 }
 
-
 .dark-mode {
     background-color: #121212;
     color: #ffffff;
-
 }
 
 #card{
@@ -32,6 +30,22 @@ body{
     background-size: cover;
 }
 
+.clearButton{ /*supprimer le style du bouton*/
+    width: 24px; 
+    height: 24px; 
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    transition: transform 0.3s;
+    display: flex;
+    justify-content: right;
+    background: url('img/reload.svg') no-repeat center center;
+}
+
+.clearButton:hover{
+    transform: rotate(50deg);
+}
+
 #date{
     color: white;
     font-size: 22px;
@@ -39,7 +53,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-end; /* Place le contenu en bas */
-    height: 140px;
+    height: 100px;
 }
 
 #btnValider{

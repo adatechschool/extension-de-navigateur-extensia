@@ -1,15 +1,23 @@
 {
     "manifest_version":3,
     "name":"To do list",
-    "description":"Si tu veux voir tes avancées et pas te perdre dans tes tâches, cette to do list est faite pour toi !",
+    "description":"La to do list qu'il te faut !",
     "version": "1.0",
     "permissions": [
     "scripting",
     "activeTab"
     ],
+    "icons": {
+        "16": "icons/chrome-icon-16.png",
+        "48": "icons/chrome-icon-48.png",
+        "128": "icons/chrome-icon-128.png"
+      },
     "action": {
         "default_popup":"popup.html",
-        "default_icon":"icone_rose.png"
+        "default_icon": {
+      "16": "icons/chrome-icon-16.png",
+      "48": "icons/chrome-icon-48.png",
+      "128": "icons/chrome-icon-128.png"
     }
-    
     }
+}
