@@ -1,11 +1,14 @@
 const card = document.getElementById("card")
 const input = document.querySelector("input")
-const button = document.getElementById("btnValider")
+const button = document.querySelector("button")
 const containerList = document.getElementById("containerList")
 const ul = document.createElement("ul")
 const date = document.getElementById("date")
+<<<<<<< HEAD
 const trashButtonWhite = document.querySelector('.trashButton')
 
+=======
+>>>>>>> a73f5de (add content.js)
 
 button.innerHTML = "Valider"
 containerList.appendChild(ul);
@@ -45,49 +48,22 @@ button.addEventListener('click', () => {
     const inputCheckbox = document.createElement("input")
 
     taskList.forEach((task) => {
-      savedTheme=localStorage.getItem('theme')
         trashButton.classList.add("trashButton")
         inputCheckbox.classList.add("taskUnChecked")
         inputCheckbox.type = "checkbox"
 
         inputCheckbox.addEventListener("change", (event) => {
          // on vérifie si les tâches sont cochées ou non
-
-
-
          if(inputCheckbox.checked){
             label.style.textDecorationLine = "line-through"               
-            label.style.color = "#8f8f9d" 
-            console.log("le theme est (input checked)", savedTheme)
-
-         } else if (!inputCheckbox.checked && localStorage.getItem('theme')=== 'dark'){
-         label.style.color = "#ffffff"
-         label.style.textDecorationLine = "none"     
-           console.log("le theme est", savedTheme)
-           
-
-         }else{
-            label.style.textDecorationLine = "none"
-             label.style.color = "#8f8f9d" 
-            console.log("le theme est", savedTheme)
+            label.style.color = "#8f8f9d"              
+         } else {
+            label.style.color = "black"              
+            label.style.textDecorationLine = "none"               
          }
+         console.log(inputCheckbox.checked);
 
-           
-      });
-
-
-
-
-
-            // if( savedTheme=== 'dark'){
-            //    label.style.color = "#8f8f9d"  
-            // }
-             /*label.style.color = "#8f8f9d"*/
-            //savedtheme=== 'dark'? label.style.color = "black"  :    label.style.color = "black"         
-            /*label.style.textDecorationLine = "none"*/               
-        
-
-         
+      });      
 
         label.innerText = task // affiche la tâche courante
 
@@ -99,37 +75,5 @@ button.addEventListener('click', () => {
    })  
    console.log(taskList);
 });
-
-const toggleButton = document.getElementById("dark-mode-toggle")
-const body= document.body
-
-
-
-
-
-toggleButton.addEventListener('click',() => {
-   
-body.classList.toggle('dark-mode');
-
-if(body.classList.contains('dark-mode')){
-   localStorage.setItem('theme','dark')
-}else{
-   localStorage.setItem('theme','light');
-}
-});
-
-let savedTheme= ''
-chrome.addEventListener('load',()=>{
-savedTheme=localStorage.getItem('theme');
-if(savedTheme=== 'dark'){
-   body.classList.add('dark-mode');
-}
-
-
-});
-
-
-
-
 
 
